@@ -90,7 +90,7 @@ class BaseModel(object):
             load_path), 'Weights file not found. Have you trained a model!? We are not providing one' % load_path
 
         optimizer.load_state_dict(torch.load(load_path))
-        print 'loaded optimizer: %s' % load_path
+        print ('loaded optimizer: %s' % load_path)
 
     def _save_network(self, network, network_label, epoch_label):
         save_filename = 'net_epoch_%s_id_%s.pth' % (epoch_label, network_label)
